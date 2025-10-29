@@ -38,123 +38,164 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+<img width="1182" height="607" alt="image" src="https://github.com/user-attachments/assets/342973a5-170f-4cfc-9a57-44ed36599265" />
 
-```sql
--- Paste your SQL code below for Question 1
+
+```
+SELECT PatientID,COUNT(Medications) AS AvgMedications
+FROM MedicalRecords
+GROUP BY PatientID
 ```
 
 **Output:**
 
-![Output1](output.png)
+<img width="1213" height="753" alt="image" src="https://github.com/user-attachments/assets/69d50cd1-fc70-43c1-8fff-c3b056ba3175" />
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+<img width="1078" height="693" alt="image" src="https://github.com/user-attachments/assets/0c1076cd-74d0-4525-a7aa-c7c43d191a2c" />
 
-```sql
--- Paste your SQL code below for Question 2
+
+```
+SELECT PatientID,COUNT(*) AS TotalMedications
+FROM Prescriptions
+GROUP BY PatientID
 ```
 
 **Output:**
 
-![Output2](output.png)
+<img width="785" height="792" alt="image" src="https://github.com/user-attachments/assets/51b97cc6-fa45-42bc-9402-20a232b2b258" />
+
 
 **Question 3**
 ---
--- Paste Question 3 here
+<img width="955" height="534" alt="image" src="https://github.com/user-attachments/assets/cb0fa6e0-7217-4787-8da4-21c1369a8a77" />
 
-```sql
--- Paste your SQL code below for Question 3
+
+```
+SELECT SUM(INVENTORY) AS total_available_amount
+FROM fruits
+WHERE price>0.5
 ```
 
 **Output:**
 
-![Output3](output.png)
+<img width="598" height="366" alt="image" src="https://github.com/user-attachments/assets/f867664f-e508-4a6a-a9cf-48ddc846483f" />
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+<img width="635" height="496" alt="image" src="https://github.com/user-attachments/assets/55a6d08a-8a00-488a-8ccf-54bbe7686c3f" />
 
-```sql
--- Paste your SQL code below for Question 4
+
+```
+SELECT COUNT(id) AS employees_in_california
+FROM employee
+WHERE city='California';
 ```
 
 **Output:**
 
-![Output4](output.png)
+<img width="613" height="376" alt="image" src="https://github.com/user-attachments/assets/127f0f32-2757-4594-ac09-0d473628ea32" />
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+<img width="550" height="486" alt="image" src="https://github.com/user-attachments/assets/4aa8fbdb-0f96-4000-90e8-4035e754b2f9" />
 
-```sql
--- Paste your SQL code below for Question 5
+
+```
+SELECT MIN(purch_amt) AS MINIMUM
+FROM orders
 ```
 
 **Output:**
 
-![Output5](output.png)
+<img width="581" height="360" alt="image" src="https://github.com/user-attachments/assets/05adba06-a564-4e4f-9be7-34a4f97a0117" />
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+<img width="1048" height="473" alt="image" src="https://github.com/user-attachments/assets/6dfc4445-56dd-4f52-9c1d-2850baa8db42" />
 
-```sql
--- Paste your SQL code below for Question 6
+
+```
+SELECT SUM(workhour) AS 'Total working hours'
+FROM employee1
 ```
 
 **Output:**
 
-![Output6](output.png)
+<img width="648" height="371" alt="image" src="https://github.com/user-attachments/assets/c5c1939c-a9d0-450e-8bd1-b4aeb9689964" />
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+<img width="1235" height="495" alt="image" src="https://github.com/user-attachments/assets/e108a4d5-e3e5-45f7-8207-eb832adae484" />
 
-```sql
--- Paste your SQL code below for Question 7
+
+```
+SELECT age, MIN(income) AS 'MIN(income)'
+FROM employee
+WHERE income<=400000
+group by age
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="678" height="439" alt="image" src="https://github.com/user-attachments/assets/430ec9d0-75a4-45cd-a5aa-c61cf27ad1f8" />
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+<img width="1177" height="476" alt="image" src="https://github.com/user-attachments/assets/517bc0df-93c0-4c78-b175-f7ee674066b2" />
 
-```sql
--- Paste your SQL code below for Question 8
+
+```
+SELECT category_id,MIN(price) AS Price
+FROM products 
+WHERE price<10
+GROUP BY category_id
 ```
 
 **Output:**
 
-![Output8](output.png)
+<img width="661" height="426" alt="Screenshot 2025-10-29 103102" src="https://github.com/user-attachments/assets/531fd14e-7d0e-488e-bcd7-7fa9561a42e4" />
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+<img width="1234" height="566" alt="image" src="https://github.com/user-attachments/assets/9f2e632e-67a2-411e-8c2c-440d40993bea" />
 
-```sql
--- Paste your SQL code below for Question 9
+
+```
+SELECT city,SUM(Income) AS Income
+FROM employee
+GROUP BY city
+HAVING SUM(Income)>200000;
 ```
 
 **Output:**
 
-![Output9](output.png)
+<img width="659" height="586" alt="image" src="https://github.com/user-attachments/assets/cf7d956a-0f46-403d-8ec4-c52889fd0b15" />
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+<img width="994" height="504" alt="image" src="https://github.com/user-attachments/assets/609f0177-c78d-49a8-a9d4-1db24056a4e8" />
 
-```sql
--- Paste your SQL code below for Question 10
+
+```
+SELECT DoctorID,COUNT(*) AS TotalRecords
+FROM MedicalRecords
+GROUP BY DoctorID
+ORDER BY DoctorID;
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="788" height="668" alt="image" src="https://github.com/user-attachments/assets/44aa61e8-7f5b-43a5-af0d-91dedfce1a0c" />
 
 
 ## RESULT
