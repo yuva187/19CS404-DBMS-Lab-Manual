@@ -3,7 +3,8 @@
 ## AIM
 To write and execute PL/SQL trigger programs for automating actions in response to specific table events like INSERT, UPDATE, or DELETE.
 
----
+
+
 
 ## THEORY
 
@@ -207,4 +208,5 @@ INSERT INTO employees VALUES (203, 'GoodPay', 'Trainee', 3500, 20)
 
 ## RESULT
 Thus, the PL/SQL trigger programs were written and executed successfully.
+
 
